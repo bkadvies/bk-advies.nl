@@ -1,8 +1,8 @@
 :root {
-    --primary: #2c3e50;
-    --secondary: #3498db;
-    --light: #ecf0f1;
-    --dark: #2c3e50;
+    --primary: #2c5545;
+    --secondary: #7ab5a0;
+    --light: #e8f3ee;
+    --dark: #2c5545;
 }
 
 * {
@@ -16,6 +16,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark);
+    background-color: var(--light);
 }
 
 nav {
@@ -71,22 +72,54 @@ section {
 }
 
 #hero {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--primary);
     color: white;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 0 2rem;
 }
 
 .hero-content {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 600;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .cta-button {
@@ -96,12 +129,14 @@ section {
     color: var(--primary);
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: fit-content;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
+    background: var(--light);
 }
 
 .services-grid {
@@ -121,6 +156,7 @@ section {
 
 .service-card:hover {
     transform: translateY(-5px);
+    background: var(--light);
 }
 
 .service-card h3 {
@@ -155,7 +191,7 @@ section {
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--secondary);
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -173,20 +209,6 @@ section {
 
 .submit-button:hover {
     background: var(--secondary);
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    section {
-        padding: 3rem 1rem;
-    }
 }
 
 .footer {
@@ -229,4 +251,16 @@ section {
 .linkedin-icon {
     width: 24px;
     height: 24px;
+}
+
+@media (max-width: 1200px) {
+    .hero-image img {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image img {
+        max-width: 100%;
+    }
 }
