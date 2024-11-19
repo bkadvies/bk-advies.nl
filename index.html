@@ -1,43 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #666;
-            font-size: 1.2em;
-        }
-        .emoji {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>BK Advies - Interim Consultancy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="emoji">🏗️</div>
-        <h1>bk-advies is under construction</h1>
-        <p>We're working on something awesome. Check back soon for some updates!</p>
-    </div>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">BK Advies</div>
+            <div class="nav-links">
+                <a href="#diensten">Diensten</a>
+                <a href="#ervaring">Ervaring</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Strategische Interim Consultancy</h1>
+                <p>Jarenlange ervaring in het transformeren van bedrijfsuitdagingen naar kansen</p>
+                <a href="#contact" class="cta-button">Neem Contact Op</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="diensten">
+        <div class="container">
+            <h2 data-aos="fade-up">Diensten</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Strategische Planning</h3>
+                    <p>Ontwikkeling van uitgebreide bedrijfsstrategieën om uw organisatiedoelen te bereiken</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Verandermanagement</h3>
+                    <p>Begeleid uw organisatie door transities met minimale verstoring</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Procesoptimalisatie</h3>
+                    <p>Stroomlijn operaties en verbeter de efficiëntie in uw bedrijf</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-form" data-aos="fade-up">
+                <h2>Contact</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Naam</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Bericht</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Verstuur Bericht</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Contact Informatie</h3>
+                    <p>Email: info@bk-advies.nl</p>
+                    <p>Tel: +31 (0)6 12345678</p>
+                    <p>KvK: 1234583</p>
+                    <a href="https://www.linkedin.com/in/bas-kooijman-ab93528/" target="_blank" class="linkedin-button">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/linkedin.svg" alt="LinkedIn" class="linkedin-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
