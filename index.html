@@ -11,7 +11,9 @@
 <body>
     <nav>
         <div class="nav-content">
-            <div class="logo">BK Advies</div>
+            <div class="logo">
+                <img src="images/logo.svg" alt="BK Advies Logo" class="logo-image">
+            </div>
             <div class="nav-links">
                 <a href="#diensten">Diensten</a>
                 <a href="#ervaring">Ervaring</a>
@@ -28,7 +30,7 @@
                 <a href="#contact" class="cta-button">Neem Contact Op</a>
             </div>
             <div class="hero-image" data-aos="fade-left">
-                <img src="images/male_pose.jfif" alt="CEO Portrait">
+                <img src="images/bas-kooijman-portrait.jpg" alt="Bas Kooijman Portrait">
             </div>
         </div>
     </section>
@@ -57,19 +59,20 @@
         <div class="container">
             <div class="contact-form" data-aos="fade-up">
                 <h2>Contact</h2>
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/JOUW_FORMSPREE_ID" method="POST">
                     <div class="form-group">
                         <label for="name">Naam</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Bericht</label>
-                        <textarea id="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
+                    <input type="hidden" name="_next" value="https://JOUW_GITHUB_USERNAME.github.io/JOUW_REPO_NAAM/bedankt.html">
                     <button type="submit" class="submit-button">Verstuur Bericht</button>
                 </form>
             </div>
