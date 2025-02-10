@@ -15,11 +15,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
-    // Form submission handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Bedankt voor uw bericht! Ik neem zo spoedig mogelijk contact met u op.');
-        this.reset();
-    });
 });
